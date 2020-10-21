@@ -1,0 +1,99 @@
+<?xml version="1.0"?> 
+<robot name="rrviz" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<!-- ...................Material Definitions........................ -->
+
+ <material name="red">
+	<color rgba="0.8 0.0 0.0 1.0"/>
+ </material>
+
+ <material name="white">
+  	<color rgba="1.0 1.0 1.0 1.0"/>
+ </material>
+
+<!--.................... Constant Definitions........................-->
+  <xacro:property name="deg" value="0.017453293"/>
+
+<!---............................. Link Definitions ..................-->
+  <link name="base_link">
+    <visual>
+        <geometry>
+           <box size="2 2 1"/>
+        </geometry>
+        <material name ="red"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+
+  <link name="link1">
+    <visual>
+        <geometry>
+           <cylinder radius="0.85" length="0.4"/>
+        </geometry>
+        <material name ="white"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+
+  <link name="link2">
+    <visual>
+        <geometry>
+	   <cylinder length="3" radius="0.15"/>
+	</geometry>
+        <material name ="red"/>
+        <origin rpy="0 0 0" xyz="0 -0.5 0"/>
+    </visual>
+ </link>
+
+  <link name="link3">
+    <visual>
+        <geometry>
+	   <cylinder length="3" radius="0.15"/>
+	</geometry>
+        <material name ="red"/>
+        <origin rpy="0 0 0" xyz="0 0.5 0"/>
+    </visual>
+  </link>
+
+  <link name="link4">
+    <visual>
+        <geometry>
+           <cylinder radius="0.4" length="0.2"/>
+        </geometry>
+        <material name ="white"/>
+        <origin rpy="0 1.6 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+
+<!--.......................Joint Definitions..........................-->
+
+    <joint name="joint1" type="revolute">
+        <parent link="base_link"/>
+        <child link="link1"/>
+        <axis xyz="0 0 1" />
+        <limit effort="300.0" lower="${-180*deg}" upper="${180*deg}" velocity="${125*deg}"/>
+        <origin xyz="0 0 0.5" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="joint2" type="fixed">
+        <parent link="link1"/>
+        <child link="link2"/>
+        <origin xyz="0 0 1.5" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="joint3" type="fixed">
+        <parent link="link1"/>
+        <child link="link3"/>
+        <origin xyz="0 0 1.5" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="joint4" type="revolute">
+        <parent link="link3"/>
+        <child link="link4"/>
+        <axis xyz="0 1 0" />
+        <limit effort="300.0" lower="${-360*deg}" upper="${360*deg}" velocity="${172*deg}"/>
+        <origin xyz="0 0 1.4" rpy="0 0 0"/>
+    </joint>
+
+</robot>
+

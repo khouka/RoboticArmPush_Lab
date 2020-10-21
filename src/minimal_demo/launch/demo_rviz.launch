@@ -1,0 +1,8 @@
+<launch>
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find minimal_demo)/urdf/rrviz.xacro'"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+    <node name="rrviz" pkg="rviz" type="rviz"/> 
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+        <param name="use_gui" value="True"/>
+    </node>
+</launch>
