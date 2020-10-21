@@ -54,6 +54,48 @@
 - Now if you launch the file again, the robot model should appear, as the adjustments were saved. Now let’s break down the key code segments! Now let’s go over some basics of ROS, then we will take a look at the code you just ran. 
 
 ## ROS Basics:
+In this segment, we will briefly go over some of the basics of using ROS. If you want to further learn about ROS, you can also head to the following link: (http://wiki.ros.org/ROS/Tutorials). 
+  1. Workspace:
+     A catkin workspace is a folder where you modify, build, and install catkin packages. All your work for a specific   project should be encompassed in a workspace. To create a workspace type:
+     ```
+     $ mkdir <workspace name>
+     ```
+     It is also good practice to keep all your packages inside an src folder in the workspace:
+     ```
+     $ cd <workspace name>
+     $ mkdir src
+     ```
+  2. Package:
+     A package is a directory that contains all of the files, programs, libraries, and datasets needed to provide some   useful functionality. Every program that you write in ROS will need to be inside a package. To create a package:
+     ```
+     $ catkin_create_pkg <package name>
+     ```
+
+  3. Adding dependencies:
+     Inside your catkin package you will see two files: CMakeLists.txt and package.xml.
+     - CMakeLists.txt:
+       CMakeLists.txt file contains a set of directives and instructions describing the project's  source files and targets.        To add depencies, search for the lines:
+       IMAGE
+       Edit to:
+       IMAGE
+     - Package.xml:
+       The same dependencies you added to your CMakelist.txt, you must add here. 
+       IMAGE
+       Add the dependencies in this format, make you sure you save the file afterwards.
+       ```
+       <build_depend>package name</build_depend>
+       <exec_depend>package name</exec_depend>
+       ```
+  4. Compiling and sourcing:
+     After editing the workspace, you must compile your code using:
+     ```
+     $ catkin_make
+     ```
+     After compiling you must source the development folder of workspace:
+     ```
+     $ source /home/<account name>/<workspace name>/devel/setup.bash
+     ```
+## The Code Explained
 Inside `Example/` folder, there're three basic example scripts, showing how to read keyboard inputs, drive a turtle with python turtle module and detect red object.
 
 
