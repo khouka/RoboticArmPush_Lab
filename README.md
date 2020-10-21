@@ -73,7 +73,7 @@ In this segment, we will briefly go over some of the basics of using ROS. If you
   3. Adding dependencies:
      Inside your catkin package you will see two files: CMakeLists.txt and package.xml.
      - CMakeLists.txt:
-       CMakeLists.txt file contains a set of directives and instructions describing the project's  source files and         targets. To add depencies, search for the lines:
+       CMakeLists.txt file contains a set of directives and instructions describing the project's  source files and          targets. To add depencies, search for the lines:
        IMAGE
        Edit to:
        IMAGE
