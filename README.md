@@ -36,17 +36,17 @@
 - The format of launching a ROS launch file is the roslaunch command then the <package name>, and lastly the <launch file>. You should see 2 popup displays:
    IMAGE NUMBER 1
 - Now that we have RViz running let’s display the robot, to do so, you must adjust a few settings in the RViz: 
-  a. Under the displays panel, there is a fixed Frame, click on the word map, select base_link.
+  - Under the displays panel, there is a fixed Frame, click on the word map, select base_link.
      IMAGE NUMBER 2  
-  b. There should be an Add bottom, at the bottom part of the RViz, click on the Add ,  scroll down and select the RobotModel. 
-  c. After adding the RobotModel the robot should appear, you can move the robot using the joint_state_publisher pop up. As you can see by moving joint 1 we are rotating around the z axis, and on joint 2 we are rotating around the y axis. 
+  - There should be an Add bottom, at the bottom part of the RViz, click on the Add ,  scroll down and select the RobotModel. 
+  - After adding the RobotModel the robot should appear, you can move the robot using the joint_state_publisher pop up. As you can see by moving joint 1 we are rotating around the z axis, and on joint 2 we are rotating around the y axis. 
    IMAGE 3
    
 - Let’s configure and save the progress, so that you won’t have to readjust the settings every time you run the simulation. 
-  a. After adjusting the settings. Click on File in the top left corner, then Save Config As:
+  - After adjusting the settings. Click on File in the top left corner, then Save Config As:
   IMAGE 4
-  b. Save the configuration inside the launch directory and name it coin_config.rviz
-  c. Lastly, make an adjustment in the coin_rviz.launch file by adding: 
+  - Save the configuration inside the launch directory and name it coin_config.rviz
+  - Lastly, make an adjustment in the coin_rviz.launch file by adding: 
   ```
   args=" -d $(find demo)/launch/coin_config.rviz"
   ```
