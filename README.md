@@ -47,9 +47,9 @@
   IMAGE 4
   - Save the configuration inside the launch directory and name it coin_config.rviz
   - Lastly, make an adjustment in the coin_rviz.launch file by adding: 
-  ```
-  args=" -d $(find demo)/launch/coin_config.rviz"
-  ```
+    ```
+    args=" -d $(find demo)/launch/coin_config.rviz"
+    ```
     after the type="rviz" part of the code. Save and close the file. 
 - Now if you launch the file again, the robot model should appear, as the adjustments were saved. Now let’s break down the key code segments! Now let’s go over some basics of ROS, then we will take a look at the code you just ran. 
 
@@ -74,7 +74,7 @@ In this segment, we will briefly go over some of the basics of using ROS. If you
   3. Adding dependencies:
      Inside your catkin package you will see two files: CMakeLists.txt and package.xml.
      - CMakeLists.txt:
-       CMakeLists.txt file contains a set of directives and instructions describing the project's  source files and targets.        To add depencies, search for the lines:
+       CMakeLists.txt file contains a set of directives and instructions describing the project's  source files and         targets. To add depencies, search for the lines:
        IMAGE
        Edit to:
        IMAGE
