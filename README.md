@@ -43,7 +43,7 @@
    IMAGE 3
    
 - Let’s configure and save the progress, so that you won’t have to readjust the settings every time you run the simulation. 
-  a. After adjusting the settings and the robot is properly displayed. Click on File in the top left corner, then Save   Config As.  
+  a. After adjusting the settings. Click on File in the top left corner, then Save Config As:
   IMAGE 4
   b. Save the configuration inside the launch directory and name it coin_config.rviz
   c. Lastly, make an adjustment in the coin_rviz.launch file by adding: 
