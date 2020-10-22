@@ -152,7 +152,7 @@ The link element describes a rigid body with an inertia, visual features, and co
 - Call the material defined earlier, set which color
 - The origins of the link: it’s spawn value xyz,and it’s fixed axis roll, pitch and yaw angles.
 <p align="left">
-<img src="figures/xyz.png" alt="" width="25%"><img src="figures/rpy.png" alt="" width="25%">
+<img src="figures/xyz.png" alt="" width="25%"><img src="figures/rpy.png" alt="" width="25%"><img src="figures/link.png" alt="" width="35%">
 </p>
 
 
