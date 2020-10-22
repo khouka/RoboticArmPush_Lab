@@ -32,7 +32,7 @@ In this lab, you are going to design a Robotic Arm Manipulator from scratch, imp
   ```
   $ roslaunch minimal_demo coin_rviz.launch
   ```
-- The format of launching a ROS launch file is the roslaunch command then the <package name>, and lastly the <launch file>. You should see 2 popup displays:
+- The format of launching a ROS launch file is the `roslaunch` command then the `<package name>`, and lastly the `<launch file>`. You should see 2 popup displays:
   <p align="left">
   <img src="figures/1.png" alt="" width="40%">
   </p>
@@ -47,17 +47,17 @@ In this lab, you are going to design a Robotic Arm Manipulator from scratch, imp
     <img src="https://media.giphy.com/media/5RQvkXs6W7LpfIdhyo/giphy.gif" alt="" width="50%">
     </p>
 - Let’s configure and save the progress, so that you won’t have to readjust the settings every time you run the simulation. 
-  - After adjusting the settings. Click on File in the top left corner, then Save Config As:
+  - After adjusting the settings. Click on File in the top left corner, then `Save Config As`:
     <p align="left">
     <img src="figures/3.png" alt="" width="25%">
     </p>
-  - Save the configuration inside the launch directory and name it coin_config.rviz
-  - Lastly, make an adjustment in the coin_rviz.launch file by adding: 
+  - Save the configuration inside the launch directory and name it `coin_config.rviz`
+  - Lastly, make an adjustment in the `coin_rviz.launch` file by adding: 
     ```
     args=" -d $(find demo)/launch/coin_config.rviz"
     ```
-    after the `type="rviz"/` part of the code. Save and close the file. 
-- Now if you launch the file again, the robot model should appear, as the adjustments were saved. Now let’s break down the key code segments! Now let’s go over some basics of ROS, then we will take a look at the code you just ran. 
+    after the `type="rviz"` part of the code. Save and close the file. 
+- Now if you launch the file again, the robot model should appear, as the adjustments were saved. Now let’s go over some basics of ROS, then we will take a look at the code you just ran. 
 
 ## ROS Basics:
 In this segment, we will briefly go over some of the basics of using ROS. If you want to further learn about ROS, you can also head to the following link: (http://wiki.ros.org/ROS/Tutorials). 
@@ -79,7 +79,7 @@ In this segment, we will briefly go over some of the basics of using ROS. If you
 
   3. Adding dependencies:
      Inside your catkin package you will see two files: CMakeLists.txt and package.xml.
-     - CMakeLists.txt:
+     - 'CMakeLists.txt':
        CMakeLists.txt file contains a set of directives and instructions describing the project's  source files and          targets. To add depencies, search for the lines:
        ```
        ## is used, also find other catkin packages
@@ -93,7 +93,7 @@ In this segment, we will briefly go over some of the basics of using ROS. If you
        package name
        )
        ```
-     - Package.xml:
+     - 'Package.xml':
        The same dependencies you added to your CMakelist.txt, you must add here. 
        ```
        <!--   <doc_depend>doxygen</doc_depend> -->
