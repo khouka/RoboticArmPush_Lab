@@ -39,7 +39,7 @@ In this lab, you are going to design a Robotic Arm Manipulator from scratch, imp
 - Now that we have RViz running let’s display the robot, to do so, you must adjust a few settings in the RViz: 
   - Under the displays panel, there is a fixed Frame, click on the word map, select base_link.
     <p align="left">
-    <img src="figures/2.png" alt="" width="35%">
+    <img src="figures/2.png" alt="" width="30%">
     </p>  
   - There should be an Add bottom, at the bottom part of the RViz, click on the Add ,  scroll down and select the RobotModel. 
   - After adding the RobotModel the robot should appear, you can move the robot using the joint_state_publisher pop up. As you can see by moving joint 1 we are rotating around the z axis, and on joint 2 we are rotating around the y axis.
@@ -49,7 +49,7 @@ In this lab, you are going to design a Robotic Arm Manipulator from scratch, imp
 - Let’s configure and save the progress, so that you won’t have to readjust the settings every time you run the simulation. 
   - After adjusting the settings. Click on File in the top left corner, then Save Config As:
     <p align="left">
-    <img src="figures/3.png" alt="" width="35%">
+    <img src="figures/3.png" alt="" width="30%">
     </p>
   - Save the configuration inside the launch directory and name it coin_config.rviz
   - Lastly, make an adjustment in the coin_rviz.launch file by adding: 
@@ -81,12 +81,24 @@ In this segment, we will briefly go over some of the basics of using ROS. If you
      Inside your catkin package you will see two files: CMakeLists.txt and package.xml.
      - CMakeLists.txt:
        CMakeLists.txt file contains a set of directives and instructions describing the project's  source files and          targets. To add depencies, search for the lines:
-       IMAGE
+       ```
+       ## is used, also find other catkin packages
+       find_package(catkin REQUIRED)
+       ```
        Edit to:
-       IMAGE
+       ```
+       ## is used, also find other catkin packages
+       find_package(catkin REQUIRED COMPONENTS
+       package name
+       package name
+       )
+       ```
      - Package.xml:
        The same dependencies you added to your CMakelist.txt, you must add here. 
-       IMAGE
+       ```
+       <!--   <doc_depend>doxygen</doc_depend> -->
+       <buildtool_depend>catkin</buildtool_depend>
+       ```
        Add the dependencies in this format, make you sure you save the file afterwards.
        ```
        <build_depend>package name</build_depend>
