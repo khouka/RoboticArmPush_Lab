@@ -34,7 +34,7 @@ In this lab, you are going to design a Robotic Arm Manipulator from scratch, imp
   ```
 - The format of launching a ROS launch file is the roslaunch command then the <package name>, and lastly the <launch file>. You should see 2 popup displays:
   <p align="left">
-  <img src="figures/1.png" alt="" width="25%">
+  <img src="figures/1.png" alt="" width="40%">
   </p>
 - Now that we have RViz running let’s display the robot, to do so, you must adjust a few settings in the RViz: 
   - Under the displays panel, there is a fixed Frame, click on the word map, select base_link.
