@@ -200,3 +200,6 @@ Every link element being simulated needs an inertial tag, here is the unmodified
 - Interia is a subelement of the link object, must start with `<inertial>` tags
 - The mass is defined in kilograms.
 - The 3x3 rotational inertia matrix is specified with the inertia element.
+<p align="left">
+<img src="figures/Interia&Collision.png" alt="" width="80%">
+</p>
