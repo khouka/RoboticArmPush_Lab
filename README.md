@@ -133,7 +133,7 @@ In this segment, we will briefly go over some of the basics of using ROS. If you
 - For the next two categories, the links and the joints, we will have a lengthier explanation as they are the fundamentals of any robot simulation. 
 
 ### Links:
-The link element describes a rigid body with an inertia, visual features, and collision properties. For now we will only focus on the visual property, you will come across the other two properties throughout the lab. Below is a visual understanding of a link, then an unmodified version of the code.
+The link element describes a rigid body with an inertia, visual features, and collision properties. For now we will only focus on the visual property, you will come across the other two properties throughout the lab. Below is an unmodified version of the code.
   ```
   <link name="< name of the link>">            
      <visual>
@@ -152,8 +152,11 @@ The link element describes a rigid body with an inertia, visual features, and co
 - Call the material defined earlier, set which color
 - The origins of the link: it’s spawn value xyz,and it’s fixed axis roll, pitch and yaw angles.
 <p align="left">
-<img src="figures/xyz.png" alt="" width="25%"><img src="figures/rpy.png" alt="" width="25%"><img src="figures/link.png" alt="" width="35%">
+<img src="figures/xyz.png" alt="" width="25%"><img src="figures/rpy.png" alt="" width="25%">
 </p>
-
+- A visual understanding of a link:
+ <p align="left">
+ <img src="figures/link.png" alt="" width="35%">
+ </p>
 
 
