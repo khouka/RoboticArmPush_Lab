@@ -164,7 +164,13 @@ The joint element describes the kinematics and the dynamics of the joint. There 
   </joint>
   ```
 <p align="left">
-<img src="figures/Joints.png" alt="" width="70%" length="160%">
+<img src="figures/Joints.png" alt="" width="80%" length="200%">
 </p>
 
-
+### Launch file:
+In order to visualize the model in RViz and Gazebo later on, a launch file is mandatory. Launch files are of the format `.launch` and use a specific `XML` format. Inside the repostirty you cloned earlier, direct to the launch directory and open the same  launch file you configured earlier. The point of a launch file in general is that it helps in the task of launching multiple nodes together. This is what we are launching in this launch file:
+- The param line locates and loads the xacro file that contains the robot description.
+- To start a node, the `<node>` tags are used, which can be seen with the 3 nodes:
+  - The first node is for publishing the state of the joints
+  - The second node opens RViz with a predefined configuration
+  - The third node opens a gui tool so that we can manipulate the joint’s values. 
