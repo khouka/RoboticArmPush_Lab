@@ -134,9 +134,6 @@ In this segment, we will briefly go over some of the basics of using ROS. If you
 
 ### Links:
 The link element describes a rigid body with an inertia, visual features, and collision properties. For now we will only focus on the visual property, you will come across the other two properties throughout the lab. Below is a visual understanding of a link, then an unmodified version of the code.
-<p align="left">
-<img src="figures/link.png" alt="" width="35%">
-</p>
   ```
   <link name="< name of the link>">            
      <visual>
