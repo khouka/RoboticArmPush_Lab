@@ -137,8 +137,8 @@ The link element describes a rigid body with an inertia, visual features, and co
 <p align="left">
 <img src="figures/link.png" alt="" width="35%">
 </p>
- ```
- <link name="< name of the link>">            
+  ```
+  <link name="< name of the link>">            
      <visual>
          <geometry>
             <box size="<size values"/>
@@ -146,8 +146,8 @@ The link element describes a rigid body with an inertia, visual features, and co
          <material name ="< color name>"/>
          <origin rpy="<link’s rpy>" xyz="<link’s xyz"/>
      </visual>
- </link>
- ```
+  </link>
+  ```
 - Create a link tag, and define its name
 - Set the geometry of the link:
   - Box (length width height)                         
@@ -155,7 +155,7 @@ The link element describes a rigid body with an inertia, visual features, and co
 - Call the material defined earlier, set which color
 - The origins of the link: it’s spawn value xyz,and it’s fixed axis roll, pitch and yaw angles.
 <p align="left">
-<img src="figures/xyz.png" alt="" width="25%">           <img src="figures/rpy.png" alt="" width="25%">
+<img src="figures/xyz.png" alt="" width="25%"><img src="figures/rpy.png" alt="" width="25%">
 </p>
 
 
