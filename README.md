@@ -56,7 +56,7 @@ In this lab, you are going to design a Robotic Arm Manipulator from scratch, imp
     ```
     args=" -d $(find demo)/launch/coin_config.rviz"
     ```
-    after the type="rviz" part of the code. Save and close the file. 
+    after the `type="rviz"/` part of the code. Save and close the file. 
 - Now if you launch the file again, the robot model should appear, as the adjustments were saved. Now let’s break down the key code segments! Now let’s go over some basics of ROS, then we will take a look at the code you just ran. 
 
 ## ROS Basics:
