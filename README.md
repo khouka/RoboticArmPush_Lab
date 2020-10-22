@@ -196,7 +196,6 @@ Every link element being simulated needs an inertial tag, here is the unmodified
      <mass value="1"/>
      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
  </inertial>
-
  ```
 - Interia is a subelement of the link object, must start with `<inertial>` tags
 - The mass is defined in kilograms.
