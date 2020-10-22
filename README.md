@@ -186,3 +186,18 @@ For this task, build a robotic arm from scratch by using the concepts covered ea
 <p align="left">
 <img src="figures/modellinks&joints.png" alt="" width="80%">
 </p>
+
+## Task #3 Inertia and Collision Properties 
+For this task, implement the Inertia and Collision Properties to the links of the robotic arm you designed in task 1. Both properties are encompassed by the link tag. In order to get your model to simulate properly, you need to define several physical properties of your robot, i.e. the properties that a physics engine like Gazebo would need. 
+### Inertia:
+Every link element being simulated needs an inertial tag, here is the unmodified format:
+ ```
+ <inertial>
+     <mass value="1"/>
+     <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+ </inertial>
+
+ ```
+- Interia is a subelement of the link object, must start with `<inertial>` tags
+- The mass is defined in kilograms.
+- The 3x3 rotational inertia matrix is specified with the inertia element.
