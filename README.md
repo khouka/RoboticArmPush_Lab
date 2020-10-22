@@ -133,6 +133,9 @@ In this segment, we will briefly go over some of the basics of using ROS. If you
 - For the next two categories, the links and the joints, we will have a lengthier explanation as they are the fundamentals of any robot simulation. 
 
 ### Links:
+<p align="left">
+<img src="figures/link.png" alt="" width="35%">
+</p>
 The link element describes a rigid body with an inertia, visual features, and collision properties. For now we will only focus on the visual property, you will come across the other two properties throughout the lab. Below is a visual understanding of a link, then an unmodified version of the code.
   ```
   <link name="< name of the link>">            
@@ -145,9 +148,6 @@ The link element describes a rigid body with an inertia, visual features, and co
      </visual>
   </link>
   ```
-<p align="left">
-<img src="figures/link.png" alt="" width="35%">
-</p>
 - Create a link tag, and define its name
 - Set the geometry of the link:
   - Box (length width height)                         
