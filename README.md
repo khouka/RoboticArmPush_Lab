@@ -152,7 +152,6 @@ The link element describes a rigid body with an inertia, visual features, and co
 <img src="figures/xyzandrpy.png" alt="" width="60%">
 </p>
 
-
 ### Joints:
 The joint element describes the kinematics and the dynamics of the joint. There are a total   of 6 types of joints. For this series we will utilize three; The revolute type, a hinge joint that rotates along the axis.The fixed type, which locks all degrees of freedom. We use this since we need a joint between the two links, otherwise it would bring up a root error. Lastly, for the grippers of the robotic arm, we use the prismatic type, a sliding joint that slides along the axis.
   ```
@@ -164,5 +163,8 @@ The joint element describes the kinematics and the dynamics of the joint. There 
      <origin xyz="" rpy=""/>
   </joint>
   ```
+<p align="left">
+<img src="figures/Joints.png" alt="" width="70%" length="160%">
+</p>
 
 
