@@ -221,6 +221,10 @@ In order to get collision detection to work or to simulate the robot in Gazebo, 
 ## Checkpoint:
 Your robot should look similar to the one shown below, the joints should be able to move similarly and the collision property should show an identical model when under `RobotModel`you, uncheck the `Visual Enabled` and enable the `Collision Enabled`.
 ### The robot model:
+ <p align="left">
+ <img src="https://media.giphy.com/media/x7RnJWgISJnjuPd6Qd/giphy.gif" alt="" width="50%">
+ </p>
+
 
 
 
