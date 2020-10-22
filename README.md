@@ -43,7 +43,7 @@ In this lab, you are going to design a Robotic Arm Manipulator from scratch, imp
     </p>  
   - There should be an Add bottom, at the bottom part of the RViz, click on the Add ,  scroll down and select the RobotModel. 
   - After adding the RobotModel the robot should appear, you can move the robot using the joint_state_publisher pop up. As you can see by moving joint 1 we are rotating around the z axis, and on joint 2 we are rotating around the y axis. 
-   ![https://media.giphy.com/media/5RQvkXs6W7LpfIdhyo/giphy.gif]
+    ![Alt Text](https://media.giphy.com/media/5RQvkXs6W7LpfIdhyo/giphy.gif)
 - Let’s configure and save the progress, so that you won’t have to readjust the settings every time you run the simulation. 
   - After adjusting the settings. Click on File in the top left corner, then Save Config As:
   IMAGE 4
