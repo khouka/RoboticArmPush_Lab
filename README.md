@@ -174,3 +174,9 @@ In order to visualize the model in RViz and Gazebo later on, a launch file is ma
   - The first node is for publishing the state of the joints
   - The second node opens RViz with a predefined configuration
   - The third node opens a gui tool so that we can manipulate the joint’s values. 
+
+## Task #1 Preparation and workspace setup
+In this task, you will create the workspace structure for this project. Create a workspace called `ramSimulation_ws`,inside create a package called `ram_push`. Add five folders to your package: `config`, `launch`, `urdf`, `scripts`, and `worlds`. Compile and source your workspace. The directory structure should look like the following:
+<p align="left">
+<img src="figures/Task1.png" alt="" width="80%" length="200%">
+</p>
