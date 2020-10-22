@@ -146,7 +146,7 @@ The link element describes a rigid body with an inertia, visual features, and co
   </link>
   ```
 <p align="left">
-<img src="figures/Links.png" alt="" width="60%" length="50%">
+<img src="figures/Links.png" alt="" width="80%" length="200%">
 </p>
 <p align="left">
 <img src="figures/xyz.png" alt="" width="25%"><img src="figures/rpy.png" alt="" width="25%">
