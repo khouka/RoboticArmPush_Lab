@@ -133,7 +133,27 @@ In this segment, we will briefly go over some of the basics of using ROS. If you
 - For the next two categories, the links and the joints, we will have a lengthier explanation as they are the fundamentals of any robot simulation. 
 
 ### Links:
-
+The link element describes a rigid body with an inertia, visual features, and collision properties. For now we will only focus on the visual property, you will come across the other two properties throughout the lab. 
+```
+<link name="< name of the link>">
+    <visual>
+        <geometry>
+           <box size="<size values"/>
+        </geometry>
+        <material name ="< color name>"/>
+        <origin rpy="<link’s rpy>" xyz="<link’s xyz"/>
+    </visual>
+</link>
+```
+- Create a link tag, and define its name
+- Set the geometry of the link:
+  - Box (length width height)
+    <p align="right">
+    <img src="figures/link.png" alt="" width="30%">
+    </p>
+  - Cylinder (radius length)
+- Call the material defined earlier, set which color
+- The origins of the link: it’s spawn value xyz,and it’s fixed axis roll, pitch and yaw angles.
 
 
 
