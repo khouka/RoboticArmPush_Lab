@@ -229,7 +229,21 @@ Your robot should look similar to the one shown below, the joints should be able
  <p align="left">
  <img src="figures/CollisionCheck.gif" alt="" width="50%">
  </p>
-
+ 
+## Task #4 Simulation using Gazebo
+Gazebo is a 3D dynamic simulator which can accurately and efficiently simulate populations of robots in complex indoor and outdoor environments. Gazebo offers physics simulation at a high degree of fidelity, a suite of sensors, and interfaces for both users and programs. You will be using gazebo to design robots, test robotics algorithms, and apply it to real life scenarios. For this task, you will simulate your robot through Gazebo. Read the information below then complete the bulletin letters. 
+### Installation:
+  ```
+  $ source /opt/ros/melodic/setup.bash
+  $ sudo apt-get install ros-melodic-gazebo-ros-pkgs ros-melodic-gazebo-ros-control
+  ```
+### Testing:
+  - In a new shell run roscore, Then in another shell run gazebo:
+   ```
+   $ roscore 
+   $ rosrun gazebo_ros gazebo
+   ```
+The output should be the Gazebo GUI, if you encounter any errors please direct to the debugging page and check Issue 1 and Issue 2. 
 
 
 
