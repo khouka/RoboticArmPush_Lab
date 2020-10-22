@@ -148,7 +148,7 @@ The link element describes a rigid body with an inertia, visual features, and co
 - Create a link tag, and define its name
 - Set the geometry of the link:
   - Box (length width height)
-    <p align="right">
+    <p align="right" style="float">
     <img src="figures/link.png" alt="" width="30%">
     </p>
   - Cylinder (radius length)
