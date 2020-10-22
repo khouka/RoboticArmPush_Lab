@@ -79,7 +79,7 @@ In this segment, we will briefly go over some of the basics of using ROS. If you
 
   3. Adding dependencies:
      Inside your catkin package you will see two files: CMakeLists.txt and package.xml.
-     - 'CMakeLists.txt':
+     - `CMakeLists.txt`:
        CMakeLists.txt file contains a set of directives and instructions describing the project's  source files and          targets. To add depencies, search for the lines:
        ```
        ## is used, also find other catkin packages
@@ -93,7 +93,7 @@ In this segment, we will briefly go over some of the basics of using ROS. If you
        package name
        )
        ```
-     - 'Package.xml':
+     - `Package.xml`:
        The same dependencies you added to your CMakelist.txt, you must add here. 
        ```
        <!--   <doc_depend>doxygen</doc_depend> -->
@@ -114,6 +114,26 @@ In this segment, we will briefly go over some of the basics of using ROS. If you
      $ source /home/<account name>/<workspace name>/devel/setup.bash
      ```
 ## The Code Explained
-Inside `Example/` folder, there're three basic example scripts, showing how to read keyboard inputs, drive a turtle with python turtle module and detect red object.
+- Since this file is in xml format, the file should start with this header. Defining the version first, then the robot name and the xacro xmlns declaration(the link). 
+  ```
+  <?xml version="1.0"?> 
+  <robot name="coin" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  ```
+- The blue lines are simply for organization and neatness purposes; think of them as dividers, there are many other ways to format your code. `<!--` is used to comment out code in the xml format.
+- The material doesn’t display anything by itself, it must be called in one of the links or joints to be used. Think of them as add ons. Here we define materials for color purposes.
+  ```
+  <material name="< material name >">
+    <color rgba="< The Color specified by four numbers representing r/g/b/a >"/>
+  </material>
+  ```
+- Right after that we have the constant definitions. Here is where you will define any constants. The conversion from degree to radians is shown, because that's the unit used.
+  ```
+  <xacro:property name="deg" value="0.017453293"/>
+  ```
+- For the next two categories, the links and the joints, we will have a lengthier explanation as they are the fundamentals of any robot simulation. 
+
+### Links:
+
+
 
 
