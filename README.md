@@ -184,5 +184,5 @@ In this task, you will create the workspace structure for this project. Create a
 ## Task #2 Designing the arm manipulator
 For this task, build a robotic arm from scratch by using the concepts covered earlier. Create an xml file and name it `ram.xacro` inside the `urdf/` directory. Build the robot there. Inside the `launch/` directory, create a launch file and name it `ram_rviz.launch`. After launching your simulation in RViz save and configure it. Use the diagrams and descriptions below for the characteristics of the links and joints of this robotic arm. 
 <p align="left">
-<img src="figures/modellinks.png" alt="" width="30%"><img src="figures/modeljoints.png" alt="" width="40%" length="100%">
+<img src="figures/modellinks&joints.png" alt="" width="50%">
 </p>
