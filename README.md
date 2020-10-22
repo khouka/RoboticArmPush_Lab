@@ -225,6 +225,8 @@ Your robot should look similar to the one shown below, the joints should be able
  <img src="https://media.giphy.com/media/x7RnJWgISJnjuPd6Qd/giphy.gif" alt="" width="50%">
  </p>
 
+### Checking the Collision:
+
 
 
 
