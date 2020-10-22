@@ -148,7 +148,7 @@ The link element describes a rigid body with an inertia, visual features, and co
 - Create a link tag, and define its name
 - Set the geometry of the link:
   - Box (length width height)
-    <img src="figures/link.png" alt="" width="30%">
+                            <img src="figures/link.png" alt="" width="30%">
   - Cylinder (radius length)
 - Call the material defined earlier, set which color
 - The origins of the link: it’s spawn value xyz,and it’s fixed axis roll, pitch and yaw angles.
