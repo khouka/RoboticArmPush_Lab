@@ -203,6 +203,7 @@ Every link element being simulated needs an inertial tag, here is the unmodified
  <p align="left">
  <img src="figures/Interia&Collision.png" alt="" width="80%">
  </p>
+
 ### Collison: 
 In order to get collision detection to work or to simulate the robot in Gazebo, you must define a collision element as well.
  ```
@@ -216,9 +217,10 @@ In order to get collision detection to work or to simulate the robot in Gazebo, 
 - The collision element is also a subelement of the link object.
 - The collision element defines its shape the same way the visual element does, with a geometry tag. Set it identical to the visual element.
 - You can also specify an origin, the origin should be identical to the visual element. 
+
 ## Checkpoint:
 Your robot should look similar to the one shown below, the joints should be able to move similarly and the collision property should show an identical model when under `RobotModel`you, uncheck the `Visual Enabled` and enable the `Collision Enabled`.
-#### The robot model:
+### The robot model:
 
 
 
