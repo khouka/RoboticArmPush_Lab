@@ -239,10 +239,10 @@ Gazebo is a 3D dynamic simulator which can accurately and efficiently simulate p
   ```
 ### Testing:
   - In a new shell run roscore, Then in another shell run gazebo:
-   ```
-   $ roscore 
-   $ rosrun gazebo_ros gazebo
-   ```
+    ```
+    $ roscore 
+    $ rosrun gazebo_ros gazebo
+    ```
 The output should be the Gazebo GUI, if you encounter any errors please direct to the debugging page and check Issue 1 and Issue 2. 
 
 
