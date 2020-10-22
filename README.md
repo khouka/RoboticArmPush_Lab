@@ -49,7 +49,7 @@ In this lab, you are going to design a Robotic Arm Manipulator from scratch, imp
 - Let’s configure and save the progress, so that you won’t have to readjust the settings every time you run the simulation. 
   - After adjusting the settings. Click on File in the top left corner, then Save Config As:
     <p align="left">
-    <img src="figures/3.png" alt="" width="30%">
+    <img src="figures/3.png" alt="" width="25%">
     </p>
   - Save the configuration inside the launch directory and name it coin_config.rviz
   - Lastly, make an adjustment in the coin_rviz.launch file by adding: 
