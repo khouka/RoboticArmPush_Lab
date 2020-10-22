@@ -39,17 +39,18 @@ In this lab, you are going to design a Robotic Arm Manipulator from scratch, imp
 - Now that we have RViz running let’s display the robot, to do so, you must adjust a few settings in the RViz: 
   - Under the displays panel, there is a fixed Frame, click on the word map, select base_link.
     <p align="left">
-    <img src="figures/2.png" alt="" width="30%">
+    <img src="figures/2.png" alt="" width="35%">
     </p>  
   - There should be an Add bottom, at the bottom part of the RViz, click on the Add ,  scroll down and select the RobotModel. 
   - After adding the RobotModel the robot should appear, you can move the robot using the joint_state_publisher pop up. As you can see by moving joint 1 we are rotating around the z axis, and on joint 2 we are rotating around the y axis.
     <p align="left">
-    <img src="https://media.giphy.com/media/5RQvkXs6W7LpfIdhyo/giphy.gif" alt="" width="30%">
+    <img src="https://media.giphy.com/media/5RQvkXs6W7LpfIdhyo/giphy.gif" alt="" width="50%">
     </p>
-    ![Alt Text](https://media.giphy.com/media/5RQvkXs6W7LpfIdhyo/giphy.gif)   
 - Let’s configure and save the progress, so that you won’t have to readjust the settings every time you run the simulation. 
   - After adjusting the settings. Click on File in the top left corner, then Save Config As:
-  IMAGE 4
+    <p align="left">
+    <img src="figures/3.png" alt="" width="35%">
+    </p>
   - Save the configuration inside the launch directory and name it coin_config.rviz
   - Lastly, make an adjustment in the coin_rviz.launch file by adding: 
     ```
