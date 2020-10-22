@@ -11,7 +11,7 @@
 * ROS Melodic: http://wiki.ros.org/melodic/Installation/Ubuntu (Follow the instructions to download)
 
 ## Introduction:
-  Here, you are going to design a Robotic Arm Manipulator from scratch, implementing the various elements and attributes to it, and move the robot using ROS topics and rqt. ROS stands for the Robot Operating System. It is an open source robotics middleware which consists of numerous software libraries and tools that will aid you in building robot applications. From drivers to state of the art algorithms and simulations, ROS encompasses all the needs to build a robotics project. You can install ROS directly on your machine, but it is highly recommended to do so on a virtual machine. Through a virtual machine such as: WorkstationPro for Windows, VMware Fusion for MacOS, or freeware VirtualBox available for both but with a bit lower quality, install Ubuntu 18.04 Bionic full-desktop (Ubuntu 18.04.5 LTS (Bionic Beaver). Inside the linux distribution, Ubuntu, use the following link (Melodic/Install - ROS Wiki) to install ROS melodic.
+  Here, you are going to design a Robotic Arm Manipulator from scratch, implementing the various elements and attributes to it, and move the robot using ROS topics and rqt. ROS stands for the Robot Operating System. It is an open source robotics middleware which consists of numerous software libraries and tools that will aid you in building robot applications. From drivers to state of the art algorithms and simulations, ROS encompasses all the needs to build a robotics project. It is highly recommended to install ROS and ubuntu through a virtual machine such as: WorkstationPro for Windows, VMware Fusion for MacOS (https://www.vmware.com/products/fusion/fusion-evaluation.html), or freeware VirtualBox available for both but with a bit lower quality (https://www.virtualbox.org/wiki/Downloads), install Ubuntu 18.04 Bionic full-desktop (Ubuntu 18.04.5 LTS (Bionic Beaver). Inside the linux distribution, Ubuntu, use the following link (Melodic/Install - ROS Wiki) to install ROS melodic.
   After having the prerequisites all set, follow the lab instructions sequentially. First, clone the github repository consisting of a simple RViz model, a gazebo world, launch files, and a simple script in both Python and C++ . If you encounter any issues throughout the trial, you can direct to the debugging issues file provided.
 
 - Go ahead and clone the following github repository:
@@ -40,7 +40,7 @@
      IMAGE NUMBER 2  
   - There should be an Add bottom, at the bottom part of the RViz, click on the Add ,  scroll down and select the RobotModel. 
   - After adding the RobotModel the robot should appear, you can move the robot using the joint_state_publisher pop up. As you can see by moving joint 1 we are rotating around the z axis, and on joint 2 we are rotating around the y axis. 
-   ![file:///Users/amarkhoukhi/Desktop/f.png]
+   ![https://im4.ezgif.com/tmp/ezgif-4-370db392b9ce.gif]
 - Let’s configure and save the progress, so that you won’t have to readjust the settings every time you run the simulation. 
   - After adjusting the settings. Click on File in the top left corner, then Save Config As:
   IMAGE 4
