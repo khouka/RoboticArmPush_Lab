@@ -145,6 +145,9 @@ The link element describes a rigid body with an inertia, visual features, and co
      </visual>
   </link>
   ```
+<p align="left">
+<img src="figures/link.png" alt="" width="35%">
+</p>
 - Create a link tag, and define its name
 - Set the geometry of the link:
   - Box (length width height)                         
