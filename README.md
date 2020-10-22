@@ -138,7 +138,7 @@ The link element describes a rigid body with an inertia, visual features, and co
 <img src="figures/link.png" alt="" width="35%">
 </p>
  ```
-  <link name="< name of the link>">            
+ <link name="< name of the link>">            
      <visual>
          <geometry>
             <box size="<size values"/>
@@ -154,8 +154,8 @@ The link element describes a rigid body with an inertia, visual features, and co
   - Cylinder (radius length)
 - Call the material defined earlier, set which color
 - The origins of the link: it’s spawn value xyz,and it’s fixed axis roll, pitch and yaw angles.
-<p align="center">
-<img src="figures/xyz.png" alt="" width="20%"><img src="figures/rpy.png" alt="" width="20%">
+<p align="left">
+<img src="figures/xyz.png" alt="" width="25%">           <img src="figures/rpy.png" alt="" width="25%">
 </p>
 
 
