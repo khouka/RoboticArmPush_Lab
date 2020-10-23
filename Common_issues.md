@@ -10,10 +10,13 @@ This page consists of common issues you might encounter throughout the lab.
   ```  
   
 ## Issue 2:
+
   <p align="left">
   <img src="figures/issue2.png" alt="" width="70%">
   </p>
+  
 ### Solution:
+
   ```
   $ sudo nano ~/.ignition/fuel/config.yaml
   ```  
