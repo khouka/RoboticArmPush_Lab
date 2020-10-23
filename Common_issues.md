@@ -101,9 +101,9 @@ If you encounter any issue where gazebo isn’t running properly, displays the p
 
 For this issue we must add a few lines of code to the launch file. The notion behind this solution is to group the nodes so that the information between them can flow properly. Inside your launch file, add the following line right under the `<launch>` :
 
-  ```
-  <group ns="/ram">
-  ```
+   ```
+   <group ns="/ram">
+   ```
   
 - Next add the following line right above the `</launch>` line:
 
@@ -158,8 +158,8 @@ If you encounter any abnormalities with your robot model in RViz like the follow
   
 ### Solution:
 
-    ```
-    $ sudo apt update 
-    $ sudo apt-get install ros-melodic-ros-control ros-melodic-ros-controllers
-    ```
+  ```
+  $ sudo apt update 
+  $ sudo apt-get install ros-melodic-ros-control ros-melodic-ros-controllers
+  ```
  
