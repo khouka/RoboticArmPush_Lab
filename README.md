@@ -526,17 +526,16 @@ Using what you have learned, create a script, in both programming languages, whe
  <img src="" alt="" width="50%">
  </p>
 
-
 ## References: 
 - Gazebo:
-  http://wiki.ros.org/simulator_gazebo/Tutorials
+  - http://wiki.ros.org/simulator_gazebo/Tutorials
 
 - Xml Format and Robot Modeling:
-  http://wiki.ros.org/urdf/XML
+  - http://wiki.ros.org/urdf/XML
 
 - ROS Basics:
-  http://wiki.ros.org/ROS/Tutorials
+  - http://wiki.ros.org/ROS/Tutorials
 
 - ROS pub/sub:
-  http://wiki.ros.org/rospy_tutorials/Tutorials/WritingPublisherSubscriber
-  http://wiki.ros.org/roscpp_tutorials/Tutorials/WritingPublisherSubscriber
+  - http://wiki.ros.org/rospy_tutorials/Tutorials/WritingPublisherSubscriber
+  - http://wiki.ros.org/roscpp_tutorials/Tutorials/WritingPublisherSubscriber
