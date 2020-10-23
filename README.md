@@ -498,4 +498,45 @@ Similar to how the python publisher node has some key segments, the C++ has some
 Unlike the python scripts, C++ nodes requires some further steps before executing:
 ### Building your node:
 - Inside the `CMakeLists.txt`, scroll to the following text:
+  ```
+  ## Declare a C++ library
+  # add_library(${PROJECT_NAME}
+  #   src/${PROJECT_NAME}/ram_push.cpp
+  # )
+  ```
+- Add the following lines underneath it: 
+  ```
+  add_executable(<node name> <directory name>/<file name>.cpp)
+  target_link_libraries (< node name>  ${catkin_LIBRARIES})
+  ```
+### Compiling and sourcing your code:
+- After editing and saving the `CMakeLists.txt`, compile your code and source the devel folder of your workspace, you can then run your C++ node using rosrun:
+  - Inside your workspace directory run:
+    ```
+    $ catkin_make
+    $ source /home/<account name>/<workspace name>/devel/setup.bash
+    ```
+  - You can now run your node by using:(node name isn’t the file name):
+    ```
+    $ rosrun <package name> <node name>
+    ```
+### Task:
+Using what you have learned, create a script, in both programming languages, where the robot pushes a box across the table. You may also create and use new worlds and different scenarios, be creative! 
+ <p align="left">
+ <img src="" alt="" width="50%">
+ </p>
 
+
+## References: 
+- Gazebo:
+  http://wiki.ros.org/simulator_gazebo/Tutorials
+
+- Xml Format and Robot Modeling:
+  http://wiki.ros.org/urdf/XML
+
+- ROS Basics:
+  http://wiki.ros.org/ROS/Tutorials
+
+- ROS pub/sub:
+  http://wiki.ros.org/rospy_tutorials/Tutorials/WritingPublisherSubscriber
+  http://wiki.ros.org/roscpp_tutorials/Tutorials/WritingPublisherSubscriber
