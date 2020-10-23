@@ -366,9 +366,10 @@ Launch your gazebo world and your robot simulation in another shell.  One of the
   <img src="https://index.ros.org/doc/ros2/_images/Topic-SinglePublisherandSingleSubscriber.gif" alt="" width="50%">
   </p>
 - In a new shell, run the following to view the topics that are currently running, to learn more about ROS topics, visit the following link(http://wiki.ros.org/Topics):
-   ```
-   $ rostopic list 
-   ```
+
+  ```
+  $ rostopic list 
+  ```
    <p align="left">
    <img src="figures/rostopic.png" alt="" width="50%">
    </p> 
@@ -392,16 +393,17 @@ Now let’s do the same, but with rqt. In a new shell launch rqt by running the 
    <p align="left">
    <img src="figures/rqt2.png" alt="" width="50%">
    </p> 
+   
 ## Task #8 Gazebo World 
 A world in gazebo simply means a collection of robots and objects; such as balls and tables, and global parameters including the sky, and physics properties. It’s good practice to keep your worlds inside a `worlds/` folder. Inside the repository you cloned earlier, go ahead and launch the world example:
  ```
  $ roslaunch minimal_demo demo_world.launch 
  ```
- Designing your world:
+ - Designing your world:
    - Run an empty gazebo simulation
    - Inside you can easily add and adjust models, click on the insert, and select whatever models you want from the vast list.
    - Once you're done, select the File menu and click on Save World As. A pop-up will appear asking you to enter a new filename. Enter brick.world and save it inside the worlds folder.
-Inside the `launch/` folder, you will find another launch file called `demo_world` which you just simulated. That’s the typical format of a gazebo world launch file. Create a world with a table not so far from the origin. Save it as `table.world` inside the worlds folder. Create a launch file for this world and name it `ram_world.launch`.
+   - Inside the `launch/` folder, you will find another launch file called `demo_world` which you just simulated. That’s the typical format of a gazebo world launch file. Create a world with a table not so far from the origin. Save it as `table.world` inside the worlds folder. Create a launch file for this world and name it `ram_world.launch`.
 
 ## Task #9 ROS Publisher(Python & C++)
 Inside the repository you cloned earlier, there is a folder called `scripts/`. The folder contains a simple Python and C++ publisher, just the basic necessary structure of how to send joint commands through ROS publisher in both programming languages. When running these, make sure you have `roscore`, the ros master node, running on a separate shell.
