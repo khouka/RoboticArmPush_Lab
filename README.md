@@ -523,7 +523,7 @@ Unlike the python scripts, C++ nodes requires some further steps before executin
 ### Task:
 Using what you have learned, create a script, in both programming languages, where the robot pushes a box across the table. You may also create and use new worlds and different scenarios, be creative! 
  <p align="left">
- <img src="" alt="" width="50%">
+ <img src="figures/task9.gif" alt="" width="60%">
  </p>
 
 ## References: 
