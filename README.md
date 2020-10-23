@@ -362,7 +362,9 @@ Use the dynamic reconfigure to tune the proportional, derivative, and integral g
 
 ## Task #7 Using ROS topics and rqt
 Launch your gazebo world and your robot simulation in another shell.  One of the ways to send joint commands is through ROS topics and rqt. There are more ameliorated ways to be used later on. Here a visualization of how the process will undergo:
-
+  <p align="left">
+  <img src="https://index.ros.org/doc/ros2/_images/Topic-SinglePublisherandSingleSubscriber.gif" alt="" width="50%">
+  </p>
 
    
 
