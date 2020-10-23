@@ -290,7 +290,82 @@ To launch your gazebo simulation:
     <p align="left">
     <img src="figures/model.png" alt="" width="50%">
     </p>
-  
+
+## Task #5 Transmission and Actuators
+The transmission element is an extension to the URDF robot description model which can describe the relationship between a joint and an actuator. The controller commands effort on the joint, and the transmission translates them into effort on the actuator. Here is an unmodified transmission element:
+```
+  <transmission name="trans##">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="<joint name>">   
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor##"> 
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+```
+- The `transmission tag`, while also defining its name
+- `transmission_interface/SimpleTransmission` is the only interface supported. 
+- The `hardwareInterface` could be position, velocity, or effort interfaces.
+- The hardware interface will be loaded by `gazebo_ros_control` plugin.
+- For more information on hardware interfaces, visit the link:(http://wiki.ros.org/ros_control#Hardware_Interfaces)
+- Task 5: Tasks 
+  - Add the Transmission and Actuators to each joint. It’s more organized to set a new divider and list all the transmissions underneath. 
+  - Add the following dependencies to your package:
+    ```
+    controller_manger 
+    joint_state_controller 
+    robot_state_publisher
+    ```
+  - Compile and source your devel directory afterwards
+
+## Task #6 Joint Controllers and PID 
+The PID gains and controller settings must be saved in a `yaml` file that gets loaded to the param server via the roslaunch file. After reading the information below, create a yaml file inside the `config/` folder and name it `ram_control.yaml`. Add joint controllers for your robots joints. The typical controller encompasses 2 key segments:
+ ```
+ The typical controller encompasses 2 key segments:
+ # Publish all joint states -----------------------------
+ joint_state_controller:
+   type: joint_state_controller/JointStateController
+   publish_rate: 50
+ ```
+ - This controller is found in the joint_state_controller package and publishes the state of the robot's joints into ROS directly from Gazebo. 
+ ```
+ # Position Controllers ----------------------------------
+joint1_position_controller:
+  type: effort_controllers/JointPositionController
+  joint: joint1
+  pid: {p:100.0 , i:0.1, d:10.0}
+ ```
+ - Use the Position controllers for the robot’s joints. The joint_position_controller (position input goes into a PID controller that outputs force/torque to the joint)
+ - From the effort_controllers, we will use the jointPostionController
+ - The pid gains; the proportional, integral, and derivative gains.
+
+### Tuning the PID gains:
+Use the dynamic reconfigure to tune the proportional, derivative, and integral gains of the PID controller. Having too inaccurate PID values can cause the robot to shake, and act inaccurately when sending commands to the joints. 
+- In a new shell launch rqt by running the following:
+   ```
+	$ rosrun rqt_gui rqt_gui
+   ```
+- Click on the `Plugins`, then inside the `Configurations`, Add the `Dynamic Reconfigure` plugin to rqt.
+  <p align="left">
+  <img src="figures/pid1.png" alt="" width="50%">
+  </p>
+- By clicking on ram under gazebo, it should reveal all the 7 joint controllers, by clicking on them the ”pid” option should appear. Clicking on the “pid” option of every joint controller should reveal 5 sliders that let you tune the controller, as shown below.
+  - P gains: The error, distance between the actual position and the target position
+  - I gains: The accumulative error
+  - D gains: The change in error
+  <p align="left">
+  <img src="figures/pid2.png" alt="" width="50%">
+  </p>
+- To adjust these values send joint command messages through ROS topics or rqt as explained in Task 7. Adjust these values until you get the desired performance of your controller.
+
+## Task #7 Using ROS topics and rqt
+Launch your gazebo world and your robot simulation in another shell.  One of the ways to send joint commands is through ROS topics and rqt. There are more ameliorated ways to be used later on. Here a visualization of how the process will undergo:
+
+
+   
+
 
 
 
