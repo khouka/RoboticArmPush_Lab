@@ -374,22 +374,24 @@ Launch your gazebo world and your robot simulation in another shell.  One of the
   <img src="figures/rostopic.png" alt="" width="50%">
   </p> 
 - Now to send joint commands use the following command line format:
-  ```
-  $ rostopic pub -1 /ram/joint1_position_controller/command std_msgs/Float64 "data: -1.0"
-  ```
+
+ ```
+ $ rostopic pub -1 /ram/joint1_position_controller/command std_msgs/Float64 "data: -1.0"
+ ```
 - Now let’s do the same, but with rqt. In a new shell launch rqt by running the following:
-  ```
-  $ rosrun rqt_gui rqt_gui
-  ```
-  - The rqt popup will display, click on `plugins`, then on `Topics`:
-    <p align="left">
-    <img src="figures/rqt1.png" alt="" width="50%">
-    </p> 
-  - Select the `message publisher`, The Message Publisher sub popup should be displayed, search for the joint’s `joint_position_controller/command` and press the green add button.
-    <p align="left">
-    <img src="figures/rqt2.png" alt="" width="50%">
-    </p> 
-  - Click on the arrow to the left of the `/ram/joint`, and set the expression amount. Finally, for the command  to be sent,  click on the blank box to the right of the arrow.
+
+ ```
+ $ rosrun rqt_gui rqt_gui
+ ```
+ - The rqt popup will display, click on `plugins`, then on `Topics`:
+   <p align="left">
+   <img src="figures/rqt1.png" alt="" width="25%">
+   </p> 
+ - Select the `message publisher`, The Message Publisher sub popup should be displayed, search for the joint’s `joint_position_controller/command` and press the green add button.
+   <p align="left">
+   <img src="figures/rqt2.png" alt="" width="50%">
+   </p> 
+ - Click on the arrow to the left of the `/ram/joint`, and set the expression amount. Finally, for the command  to be sent,  click on the blank box to the right of the arrow.
    <p align="left">
    <img src="figures/rqt2.png" alt="" width="50%">
    </p> 
@@ -451,19 +453,42 @@ To run the python file, simply direct to the directory the file is located in an
  ```
  $ python <filename>.py
  ```
-
-
-    
- 
-
-
-
-   
-
-
-
-
-
-
-
-
+### Writing a Publisher(C++) 
+Similar to how the python publisher node has some key segments, the C++ has some of its own. Writing a C++ node is more complex and requires stricter formatting to work. You can find the full code inside the scripts, `Pub.cpp` Let’s go over the key parts:
+```
+#include <ros/ros.h>
+#include <std_msgs/Float64.h>
+```
+- ros/ros.h is the ros library that includes all the headers necessary to use the most common pieces of the ROS system. It’s like rospy for the python script. Also import the Float64 message type from std_msgs, as the joint command is in that data type.
+ ```
+ int main(int argc, char **argv)
+ {
+  ros::init(argc, argv, "< node name>");
+  ros::NodeHandle n;
+ ```
+- Instantiate the main header, and Initialize ROS. Specify the name of the node. Node names must be unique in a running system. Create a handle to this process' node. The first NodeHandle created will actually do the initialization of the node.
+ ```
+ ros::Publisher joint1_pub;
+ joint1_pub = n.advertise<std_msgs::Float64>("< ROS topic name", 10)
+ ```
+- First, a publisher is created, then define the publisher using the method provided above, this tells the master that you will publish a message of type std_msgs/Float64 on a topic. The second argument is the size of our publishing queue. 
+ ```
+ ros::Rate loop_rate(10);
+  while (ros::ok())
+  {
+ ```
+- A ros::Rate object allows you to specify a frequency that you would like to loop at. The script will run what is located inside the `ros::ok()`. There are other alternatives, 
+ ```
+  std_msgs::Float64 <message name>;
+  <message name>.data = 2.0;
+  joint1_pub.publish(<message name>);
+ ```
+- Here, we broadcast a message on ROS using a message-adapted class, generally generated from a msg file. Here the standard `Float64` message is used, which has one member: `data`. And the last line is self explanatory, the message is published to the topic. 
+ ```
+ ros::spinOnce();
+   loop_rate.sleep();
+  }
+}
+ ```
+- Although `ros::spinOnce()` doesn’t serve much in this program, it’s good practice to keep it in every node. The ros::Rate object sets the program to sleep for the time remaining until the hz publish rate. 
+Unlike the python scripts, C++ nodes requires some further steps before executing:
