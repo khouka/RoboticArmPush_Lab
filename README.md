@@ -394,7 +394,7 @@ Launch your gazebo world and your robot simulation in another shell.  One of the
    </p> 
  - Click on the arrow to the left of the `/ram/joint`, and set the expression amount. Finally, for the command  to be sent,  click on the blank box to the right of the arrow.
    <p align="left">
-   <img src="figures/rqt2.png" alt="" width="50%">
+   <img src="figures/rqtcommand.gif" alt="" width="50%">
    </p> 
    
 ## Task #8 Gazebo World 
@@ -402,6 +402,9 @@ A world in gazebo simply means a collection of robots and objects; such as balls
  ```
  $ roslaunch minimal_demo demo_world.launch 
  ```
+ <p align="left">
+ <img src="figures/gazebo.png" alt="" width="50%">
+ </p>
  - Designing your world:
    - Run an empty gazebo simulation
    - Inside you can easily add and adjust models, click on the insert, and select whatever models you want from the vast list.
@@ -493,3 +496,6 @@ Similar to how the python publisher node has some key segments, the C++ has some
  ```
 - Although `ros::spinOnce()` doesn’t serve much in this program, it’s good practice to keep it in every node. The ros::Rate object sets the program to sleep for the time remaining until the hz publish rate. 
 Unlike the python scripts, C++ nodes requires some further steps before executing:
+### Building your node:
+- Inside the `CMakeLists.txt`, scroll to the following text:
+
