@@ -5,10 +5,10 @@ This page consists of common issues you might encounter throughout the lab.
     <img src="figures/issue1.png" alt="" width="70%">
     </p>  
 ### Solution:
-
-    ```
-    $ export SVGA_VGPU10=0
-    ```  
+  ```
+  $ export SVGA_VGPU10=0
+  ```  
+  
 ## Issue 2:
     <p align="left">
     <img src="figures/issue2.png" alt="" width="70%">
