@@ -370,26 +370,26 @@ Launch your gazebo world and your robot simulation in another shell.  One of the
   ```
   $ rostopic list 
   ```
-   <p align="left">
-   <img src="figures/rostopic.png" alt="" width="50%">
-   </p> 
+  <p align="left">
+  <img src="figures/rostopic.png" alt="" width="50%">
+  </p> 
 - Now to send joint commands use the following command line format:
   ```
   $ rostopic pub -1 /ram/joint1_position_controller/command std_msgs/Float64 "data: -1.0"
   ```
-Now let’s do the same, but with rqt. In a new shell launch rqt by running the following:
+- Now let’s do the same, but with rqt. In a new shell launch rqt by running the following:
   ```
   $ rosrun rqt_gui rqt_gui
   ```
- - The rqt popup will display, click on `plugins`, then on `Topics`:
+  - The rqt popup will display, click on `plugins`, then on `Topics`:
     <p align="left">
     <img src="figures/rqt1.png" alt="" width="50%">
     </p> 
- - Select the `message publisher`, The Message Publisher sub popup should be displayed, search for the joint’s `joint_position_controller/command` and press the green add button.
+  - Select the `message publisher`, The Message Publisher sub popup should be displayed, search for the joint’s `joint_position_controller/command` and press the green add button.
     <p align="left">
     <img src="figures/rqt2.png" alt="" width="50%">
     </p> 
- - Click on the arrow to the left of the `/ram/joint`, and set the expression amount. Finally, for the command  to be sent,  click on the blank box to the right of the arrow.
+  - Click on the arrow to the left of the `/ram/joint`, and set the expression amount. Finally, for the command  to be sent,  click on the blank box to the right of the arrow.
    <p align="left">
    <img src="figures/rqt2.png" alt="" width="50%">
    </p> 
