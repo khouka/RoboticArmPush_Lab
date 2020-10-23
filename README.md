@@ -366,12 +366,12 @@ Launch your gazebo world and your robot simulation in another shell.  One of the
   <img src="https://index.ros.org/doc/ros2/_images/Topic-SinglePublisherandSingleSubscriber.gif" alt="" width="50%">
   </p>
 - In a new shell, run the following to view the topics that are currently running, to learn more about ROS topics, visit the following link(http://wiki.ros.org/Topics):
-  ```
-  $ rostopic list 
-  ```
-  <p align="left">
-  <img src="figures/rostopic.png" alt="" width="50%">
-  </p> 
+   ```
+   $ rostopic list 
+   ```
+   <p align="left">
+   <img src="figures/rostopic.png" alt="" width="50%">
+   </p> 
 - Now to send joint commands use the following command line format:
   ```
   $ rostopic pub -1 /ram/joint1_position_controller/command std_msgs/Float64 "data: -1.0"
@@ -402,39 +402,41 @@ A world in gazebo simply means a collection of robots and objects; such as balls
    - Inside you can easily add and adjust models, click on the insert, and select whatever models you want from the vast list.
    - Once you're done, select the File menu and click on Save World As. A pop-up will appear asking you to enter a new filename. Enter brick.world and save it inside the worlds folder.
 Inside the `launch/` folder, you will find another launch file called `demo_world` which you just simulated. That’s the typical format of a gazebo world launch file. Create a world with a table not so far from the origin. Save it as `table.world` inside the worlds folder. Create a launch file for this world and name it `ram_world.launch`.
+
 ## Task #9 ROS Publisher(Python & C++)
 Inside the repository you cloned earlier, there is a folder called `scripts/`. The folder contains a simple Python and C++ publisher, just the basic necessary structure of how to send joint commands through ROS publisher in both programming languages. When running these, make sure you have `roscore`, the ros master node, running on a separate shell.
+
 ### Writing a Publisher(Python)
 A python publisher node consists of a couple mandatory parts. "Node" is the ROS term for an executable that is connected to the ROS network. You can find the full code inside the scripts, `Pub.py` Let’s go over the key segments:
  ```
  #!/usr/bin/env python
  ```
- - This should be the first line of your python node, this declaration makes sure your script is executed as a Python script.
+- This should be the first line of your python node, this declaration makes sure your script is executed as a Python script.
  ```
  import rospy
  ```
- - You must import rospy if you are writing a ROS Node. Rospy is the python client library for ROS. 
+- You must import rospy if you are writing a ROS Node. Rospy is the python client library for ROS. 
  ```
  from std_msgs.msg import Float64
  ```
- - You must also import a message type library for publishing. Here, from the `std_msgs.msg` package  we can import the `Float64` message type, because the joint commands receive their values as Float64. 
+- You must also import a message type library for publishing. Here, from the `std_msgs.msg` package  we can import the `Float64` message type, because the joint commands receive their values as Float64. 
  ```
  class <class name>():
     def __init__(self):
         rospy.init_node('<node name>', anonymous=True)
  ```
- - First define a class, then the class instructor, `rospy.init_node()`, is very important as it tells rospy the name of your node that until rospy has this information, it cannot start communicating with the ROS Master.
+- First define a class, then the class instructor, `rospy.init_node()`, is very important as it tells rospy the name of your node that until rospy has this information, it cannot start communicating with the ROS Master.
  ```
  self.pub = rospy.Publisher('<ROS topic name', <message type>, queue_size=10) 
  self.pub.publish(<the value>)
  ```
- - Using `rospy.Publisher`, you declare that the node publishes messages of the type you declare, which we imported from the `<>.msg` module, over a topic, and lastly set the `queue size` to 10. The queue size limits the amount of queued messages if any subscriber is not receiving them fast enough.
+- Using `rospy.Publisher`, you declare that the node publishes messages of the type you declare, which we imported from the `<>.msg` module, over a topic, and lastly set the `queue size` to 10. The queue size limits the amount of queued messages if any subscriber is not receiving them fast enough.
  ```
  def main():
     obj = <class name>()
     obj.<method name>()
  ```
- - It’s good practice to finish your code with a main method, the main method should contain all the methods in a chronological order of what the script should execute. 
+- It’s good practice to finish your code with a main method, the main method should contain all the methods in a chronological order of what the script should execute. 
  ```
  if __name__ == '__main__':
     try:
@@ -442,7 +444,7 @@ A python publisher node consists of a couple mandatory parts. "Node" is the ROS 
     except rospy.ROSInterruptException:
         pass
  ```
- - The program will execute what is written here, simply call the main method you defined earlier, the rospy.ROSInterruptException exception is sed to ignore exceptions which can be thrown by rospy.sleep() and rospy.Rate.sleep() methods when Ctrl-C is pressed.
+- The program will execute what is written here, simply call the main method you defined earlier, the rospy.ROSInterruptException exception is sed to ignore exceptions which can be thrown by rospy.sleep() and rospy.Rate.sleep() methods when Ctrl-C is pressed.
 To run the python file, simply direct to the directory the file is located in and run:
  ```
  $ python <filename>.py
