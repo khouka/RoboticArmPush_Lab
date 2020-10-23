@@ -244,6 +244,56 @@ Gazebo is a 3D dynamic simulator which can accurately and efficiently simulate p
     $ rosrun gazebo_ros gazebo
     ```
 The output should be the Gazebo GUI, if you encounter any errors please direct to the debugging page and check Issue 1 and Issue 2. 
+### Gazebo plug-in:
+ ```
+ <!--.........Gazebo plugins........ -->
+ <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/ram</robotNamespace>
+    </plugin>
+ </gazebo>
+ ```
+- The gazebo_ros_control Gazebo plugin provides a pluginlib-based interface to implement custom interfaces between Gazebo and ros_control for simulating mechanisms or numerous sorts. 
+### Gazebo launch file:
+To spawn your robot by using gazebo, you must first create a launch file for gazebo. Here is an example:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>        
+ <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find <package name>)/urdf/<file name>.xacro'" />
+  <arg name="x" default="0"/>
+  <arg name="y" default="0"/>
+  <arg name="z" default="0"/>
+       
+  <node name="<robot name>" pkg="gazebo_ros" type="spawn_model" output="screen"
+    args="-urdf -param robot_description -model ram -x $(arg x) -y $(arg y) -z $(arg z)" />             
+</launch>
+```
+- First, define the robot description parameter, using xacro to direct it to the directory in which the ram.xacro file is.
+- The next 3 lines are the coordinates where the robot will spawn. 
+- The next two lines is the node which will execute the parameters above. 
+To launch your gazebo simulation:
+-  In a shell, run roscore: 
+- In another shell, run the gazebo simulation using: 
+  ```
+  $ rosrun gazebo_ros gazebo
+  ```
+- In a third shell, from your workspace directory run the launch file:
+  ```
+  $ roslaunch ram_push ram_spawn.launch
+  ```
+- Task 4: Tasks 
+  - Add the gazebo plug-in to the ram.xacro file.
+  - Create a gazebo launch file inside the launch directory and name it ram_spawn.launch
+  - Add a fixed joint inside your xacro file that holds the base_link with the gazebo world.
+  - You might receive an error when launching the simulation because of the fixed joint types. Since there is no fixed joint type in SDF similar to one in URDF, a fixed joint does not exist in simulation. The URDF parser eliminates fixed joints by restructuring the URDF contents. There are workarounds for this, constraining the limits to zero can also mean a fixed joint.
+  - Set the colors of the links as shown below:
+    <p align="left">
+    <img src="figures/model.png" alt="" width="50%">
+    </p>
+  
+
+
+
 
 
 
