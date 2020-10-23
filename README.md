@@ -373,6 +373,7 @@ Launch your gazebo world and your robot simulation in another shell.  One of the
   <p align="left">
   <img src="figures/rostopic.png" alt="" width="50%">
   </p> 
+  
 - Now to send joint commands use the following command line format:
 
  ```
